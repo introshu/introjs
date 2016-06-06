@@ -87,7 +87,9 @@ end
 
 ## Install
 
-TBD
+```
+npm install -g introjs
+```
 
 ## Usage
 
