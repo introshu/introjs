@@ -1,0 +1,6 @@
+def main()
+end
+
+def f(): Int
+  return
+end

@@ -1,0 +1,29 @@
+def main()
+  var values = [3, 1, 4, 1, 5]
+  trace values, $values
+
+  # Ascending index
+  for i in 0 :< $values
+    write_ints([i, values[i]])
+  end
+
+  # Ascending index (Omitted "0 :<")
+  for i in $values
+    write_ints([i, values[i]])
+  end
+
+  # Each element
+  for v in values
+    write_int(v)
+  end
+
+  # Descending index
+  for i in $values - 1 :>= 0
+    write_ints([i, values[i]])
+  end
+
+  # Skip
+  for i in 1 :< $values :% 2
+    write_ints([i, values[i]])
+  end
+end

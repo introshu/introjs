@@ -1,0 +1,23 @@
+{
+  "name": "introjs",
+  "version": "0.1.0",
+  "description": "IntroJS is a JavaScript implementation of the simplified programming language Intro.",
+  "main": "./lib/index.js",
+  "bin": {
+    "introjs": "./bin/introjs.js"
+  },
+  "scripts": {
+    "pegjs": "pegjs ./lib/parser.pegjs",
+    "test": "npm run pegjs && mocha"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "pegjs": "^0.9.0"
+  },
+  "dependencies": {
+    "escodegen": "^1.8.0",
+    "minimist": "^1.2.0"
+  }
+}

@@ -1,0 +1,6 @@
+def main()
+  f([])
+end
+
+def f(a: Int)
+end
