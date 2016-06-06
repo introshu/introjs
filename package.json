@@ -1,17 +1,28 @@
 {
   "name": "introjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "IntroJS is a JavaScript implementation of the simplified programming language Intro.",
+  "keywords": [
+    "compiler",
+    "javascript",
+    "language"
+  ],
+  "author": "introshu",
+  "license": "MIT",
+  "homepage": "https://github.com/introshu/introjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/introshu/introjs.git"
+  },
   "main": "./lib/index.js",
   "bin": {
     "introjs": "./bin/introjs.js"
   },
+  "preferGlobal": true,
   "scripts": {
     "pegjs": "pegjs ./lib/parser.pegjs",
     "test": "npm run pegjs && mocha"
   },
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "mocha": "^2.4.5",
     "pegjs": "^0.9.0"
