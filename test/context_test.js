@@ -206,6 +206,12 @@ describe('context', function () {
     }, RangeError);
   });
 
+  it('rshAt', function () {
+    var values = [1, 5];
+    ctx.rshAt(values, 1, 1);
+    assert.deepStrictEqual(values, [1, 2])
+  });
+
   describe('range', function () {
     it('0 :< 4', function () {
       var it = ctx.range(0, 4, 1, false);
