@@ -212,6 +212,12 @@ describe('context', function () {
     }, RangeError);
   });
 
+  it('lshAt', function () {
+    var values = [1, 5];
+    ctx.lshAt(values, 1, 1);
+    assert.deepStrictEqual(values, [1, 10])
+  });
+
   it('rshAt', function () {
     var values = [1, 5];
     ctx.rshAt(values, 1, 1);
