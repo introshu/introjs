@@ -40,8 +40,14 @@ describe('context', function () {
     assert.strictEqual(ctx.gt(3, 2), 1);
   });
 
+  it('lsh', function () {
+    assert.strictEqual(ctx.lsh(5, 0), 5);
+    assert.strictEqual(ctx.lsh(5, 1), 10);
+    assert.strictEqual(ctx.lsh(5, 2), 20);
+    assert.strictEqual(ctx.lsh(2147483647, 1), -2);
+  });
+
   it('rsh', function () {
-    assert.strictEqual(ctx.rsh(5, -1), 0);
     assert.strictEqual(ctx.rsh(5, 0), 5);
     assert.strictEqual(ctx.rsh(5, 1), 2);
     assert.strictEqual(ctx.rsh(5, 2), 1);
