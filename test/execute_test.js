@@ -7,6 +7,7 @@ describe('execute', function () {
   var sourceFilePaths = [
     './examples/for_in/for_in.intro',
     './examples/sum/sum.intro',
+    './test/expressions/expressions.intro',
   ];
   sourceFilePaths.forEach(function (sourceFilePath) {
     it (sourceFilePath, function () {
