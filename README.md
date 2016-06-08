@@ -142,7 +142,6 @@ def write_ints(values: Int[])
 
 ## Not supported features
 
-* Bit operators
 * Hexadecimal literal
 * Multidimensional array
 * Variable-length array
