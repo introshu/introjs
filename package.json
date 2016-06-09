@@ -1,19 +1,20 @@
 {
   "name": "introjs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "IntroJS is a JavaScript implementation of the simplified programming language Intro.",
-  "keywords": [
-    "compiler",
-    "javascript",
-    "language"
-  ],
   "author": "introshu",
   "license": "MIT",
-  "homepage": "https://github.com/introshu/introjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/introshu/introjs.git"
   },
+  "homepage": "https://github.com/introshu/introjs",
+  "keywords": [
+    "compiler",
+    "introjs",
+    "javascript",
+    "language"
+  ],
   "main": "./lib/index.js",
   "bin": {
     "introjs": "./bin/introjs.js"
