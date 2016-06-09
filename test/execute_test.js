@@ -9,6 +9,7 @@ describe('execute', function () {
     './examples/sum/sum.intro',
     './test/assignments/assignments.intro',
     './test/expressions/expressions.intro',
+    './test/literals/literals.intro',
   ];
   sourceFilePaths.forEach(function (sourceFilePath) {
     it (sourceFilePath, function () {
