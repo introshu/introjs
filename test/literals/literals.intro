@@ -10,6 +10,10 @@ def main()
   write_int(0x7fffffff)
   write_empty(2)
 
+  write_int(0o0)
+  write_int(0o17777777777)
+  write_empty(2)
+
   write_ints([3])
   write_ints([3, 1, 4])
 end
