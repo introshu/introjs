@@ -3,23 +3,22 @@ def main()
 
   write_int(0)
   write_int(010)
-  write_int(2147483647)
+  write_int(2_147_483_647)
   write_empty(2)
 
   write_int(0x0)
   write_int(0x010)
-  write_int(0x7FFFFFFF)
-  write_int(0x7fffffff)
+  write_int(0x7F_FF_ff_ff)
   write_empty(2)
 
   write_int(0o0)
   write_int(0o010)
-  write_int(0o17777777777)
+  write_int(0o177_7777_7777)
   write_empty(2)
 
   write_int(0b0)
   write_int(0b010)
-  write_int(0b1111111111111111111111111111111)
+  write_int(0b111_1111_1111_1111_1111_1111_1111_1111)
   write_empty(2)
 
   write_ints([3])
