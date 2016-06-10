@@ -13,6 +13,9 @@ def compound_assignments(a: Int, b: Int): Int[]
   var mul = a
   mul *= b
 
+  var fdiv = a
+  fdiv /= b
+
   var zdiv = a
   zdiv /= b
 
@@ -34,23 +37,24 @@ def compound_assignments(a: Int, b: Int): Int[]
   var bxor = a
   bxor ^= b
 
-  return [add, sub, mul, zdiv, rem, lsh, rsh, band, bor, bxor]
+  return [add, sub, mul, fdiv, zdiv, rem, lsh, rsh, band, bor, bxor]
 end
 
 def indexed_assignments(a: Int, b: Int): Int[]
-  var values = new_ints(10)
+  var values = new_ints(11)
   for i in $values
     values[i] = a
   end
   values[0] += b
   values[1] -= b
   values[2] *= b
-  values[3] /= b
-  values[4] %= b
-  values[5] <<= b
-  values[6] >>= b
-  values[7] &= b
-  values[8] |= b
-  values[9] ^= b
+  values[3] //= b
+  values[4] /= b
+  values[5] %= b
+  values[6] <<= b
+  values[7] >>= b
+  values[8] &= b
+  values[9] |= b
+  values[10] ^= b
   return values
 end

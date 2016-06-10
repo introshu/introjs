@@ -93,6 +93,19 @@ describe('context', function () {
     }, RangeError);
   });
 
+  it('fdiv', function () {
+    assert.strictEqual(ctx.fdiv(5, 2), 2);
+    assert.strictEqual(ctx.fdiv(5, -2), -3);
+    assert.strictEqual(ctx.fdiv(-5, 2), -3);
+    assert.strictEqual(ctx.fdiv(-5, -2), 2);
+    assert.throws(function () {
+      ctx.fdiv(1, 0);
+    }, RangeError);
+    assert.throws(function () {
+      ctx.fdiv(-2147483648, -1);
+    }, RangeError);
+  });
+
   it('zdiv', function () {
     assert.strictEqual(ctx.zdiv(5, 2), 2);
     assert.strictEqual(ctx.zdiv(5, -2), -2);
@@ -185,6 +198,18 @@ describe('context', function () {
     }, RangeError);
     assert.throws(function () {
       ctx.mulAt(values, 2, 3);
+    }, RangeError);
+  });
+
+  it('fdivAt', function () {
+    var values = [1, 5];
+    ctx.fdivAt(values, 1, 2);
+    assert.deepStrictEqual(values, [1, 2])
+    assert.throws(function () {
+      ctx.fdivAt(values, -1, 3);
+    }, RangeError);
+    assert.throws(function () {
+      ctx.fdivAt(values, 2, 3);
     }, RangeError);
   });
 
