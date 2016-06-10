@@ -119,6 +119,16 @@ describe('context', function () {
     }, RangeError);
   });
 
+  it('mod', function () {
+    assert.strictEqual(ctx.mod(5, 2), 1);
+    assert.strictEqual(ctx.mod(5, -2), -1);
+    assert.strictEqual(ctx.mod(-5, 2), 1);
+    assert.strictEqual(ctx.mod(-5, -2), -1);
+    assert.throws(function () {
+      ctx.mod(1, 0);
+    }, RangeError);
+  });
+
   it('rem', function () {
     assert.strictEqual(ctx.rem(5, 2), 1);
     assert.strictEqual(ctx.rem(5, -2), 1);
@@ -222,6 +232,18 @@ describe('context', function () {
     }, RangeError);
     assert.throws(function () {
       ctx.zdivAt(values, 2, 3);
+    }, RangeError);
+  });
+
+  it('modAt', function () {
+    var values = [1, 5];
+    ctx.modAt(values, 1, 2);
+    assert.deepStrictEqual(values, [1, 1])
+    assert.throws(function () {
+      ctx.modAt(values, -1, 3);
+    }, RangeError);
+    assert.throws(function () {
+      ctx.modAt(values, 2, 3);
     }, RangeError);
   });
 
