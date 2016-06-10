@@ -93,16 +93,16 @@ describe('context', function () {
     }, RangeError);
   });
 
-  it('div', function () {
-    assert.strictEqual(ctx.div(5, 2), 2);
-    assert.strictEqual(ctx.div(5, -2), -2);
-    assert.strictEqual(ctx.div(-5, 2), -2);
-    assert.strictEqual(ctx.div(-5, -2), 2);
+  it('zdiv', function () {
+    assert.strictEqual(ctx.zdiv(5, 2), 2);
+    assert.strictEqual(ctx.zdiv(5, -2), -2);
+    assert.strictEqual(ctx.zdiv(-5, 2), -2);
+    assert.strictEqual(ctx.zdiv(-5, -2), 2);
     assert.throws(function () {
-      ctx.div(1, 0);
+      ctx.zdiv(1, 0);
     }, RangeError);
     assert.throws(function () {
-      ctx.div(-2147483648, -1);
+      ctx.zdiv(-2147483648, -1);
     }, RangeError);
   });
 
@@ -188,15 +188,15 @@ describe('context', function () {
     }, RangeError);
   });
 
-  it('divAt', function () {
+  it('zdivAt', function () {
     var values = [1, 5];
-    ctx.divAt(values, 1, 2);
+    ctx.zdivAt(values, 1, 2);
     assert.deepStrictEqual(values, [1, 2])
     assert.throws(function () {
-      ctx.divAt(values, -1, 3);
+      ctx.zdivAt(values, -1, 3);
     }, RangeError);
     assert.throws(function () {
-      ctx.divAt(values, 2, 3);
+      ctx.zdivAt(values, 2, 3);
     }, RangeError);
   });
 

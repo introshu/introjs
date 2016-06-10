@@ -13,8 +13,8 @@ def compound_assignments(a: Int, b: Int): Int[]
   var mul = a
   mul *= b
 
-  var div = a
-  div /= b
+  var zdiv = a
+  zdiv /= b
 
   var rem = a
   rem %= b
@@ -34,7 +34,7 @@ def compound_assignments(a: Int, b: Int): Int[]
   var bxor = a
   bxor ^= b
 
-  return [add, sub, mul, div, rem, lsh, rsh, band, bor, bxor]
+  return [add, sub, mul, zdiv, rem, lsh, rsh, band, bor, bxor]
 end
 
 def indexed_assignments(a: Int, b: Int): Int[]
