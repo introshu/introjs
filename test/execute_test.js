@@ -7,6 +7,7 @@ describe('execute', function () {
   var sourceFilePaths = [
     './examples/for_in/for_in.intro',
     './examples/sum/sum.intro',
+    './test/arrays/arrays.intro',
     './test/assignments/assignments.intro',
     './test/expressions/expressions.intro',
     './test/literals/literals.intro',

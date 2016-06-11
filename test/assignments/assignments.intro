@@ -44,7 +44,7 @@ def compound_assignments(a: Int, b: Int): Int[]
 end
 
 def indexed_assignments(a: Int, b: Int): Int[]
-  var values = new_ints(12)
+  var values = new Int[12]
   for i in $values
     values[i] = a
   end

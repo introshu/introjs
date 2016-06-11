@@ -113,10 +113,6 @@ Options:
 ## Built-in functions
 
 ```
-def new_ints(length: Int): Int[]
-```
-
-```
 def read(values: Int[], offset: Int, length: Int): Int
 ```
 
