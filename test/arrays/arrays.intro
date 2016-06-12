@@ -9,10 +9,21 @@ def main()
   write_ints(new Int[1])
   write_ints(new Int[3])
 
-  write_empty(3)
   var matrix = new Int[2][3]
+  matrix[1][2] = 3
+  write_empty(4)
   write_ints(matrix[1])
   write_int(matrix[1][2])
+
+  var cuboid = new Int[2][3][4]
+  cuboid[1][2][3] = 4
+  write_empty(4)
+  write_ints(cuboid[1][2])
+  write_int(cuboid[1][2][3])
+
+  cuboid[1][2] = [1, 2, 3]
+  write_empty(3)
+  write_ints(cuboid[1][2])
 end
 
 def write_empty(n: Int)
