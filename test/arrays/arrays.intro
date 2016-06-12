@@ -8,6 +8,9 @@ def main()
   write_ints(new Int[0])
   write_ints(new Int[1])
   write_ints(new Int[3])
+
+  var matrix = new Int[2][3]
+  trace matrix
 end
 
 def write_empty(n: Int)
