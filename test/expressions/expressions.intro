@@ -5,6 +5,11 @@ def main()
   write_int(-(-3))
 
   write_empty(2)
+  write_int(+0)
+  write_int(+3)
+  write_int(+(+3))
+
+  write_empty(2)
   write_int(~0)
   write_int(~3)
   write_int(~~3)
