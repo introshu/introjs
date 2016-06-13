@@ -32,10 +32,30 @@ def main()
   write_ints(matrix[0])
   write_int($matrix[1])
   write_ints(matrix[1])
+
+  matrix = increment(matrix)
+  write_empty(3)
+  write_ints(matrix[0])
+  write_ints(matrix[1])
 end
 
 def write_empty(n: Int)
   for i in n
     write_ints([])
   end
+end
+
+def increment(a: Int[][]): Int[][]
+  var ret = new Int[$a][0]
+  for i in $ret
+    ret[i] = new Int[$a[i]]
+    for j in $ret[i]
+      ret[i][j] = a[i][j] + 1
+    end
+  end
+  return ret
+end
+
+def min(a: Int, b: Int): Int
+  return a < b ? a : b
 end
