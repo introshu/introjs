@@ -24,6 +24,11 @@ def main()
   cuboid[1][2] = [1, 2, 3]
   write_empty(3)
   write_ints(cuboid[1][2])
+
+  matrix = [[1, 2, 3], [4, 5, 6]]
+  write_empty(3)
+  write_ints(matrix[0])
+  write_ints(matrix[1])
 end
 
 def write_empty(n: Int)
