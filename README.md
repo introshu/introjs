@@ -19,7 +19,7 @@ end
 def sum(values: Int[]): Int
   var ret = 0
   for v in values
-    ret = ret + v
+    ret += v
   end
   return ret
 end
@@ -27,7 +27,7 @@ end
 
 ## Features
 
-Data types are only integer (Int) and its array (Int[]).
+Data types are only integer type (Int) and its array types (Int[], Int[][], ...).
 
 All codes must be written in a file.
 
@@ -138,7 +138,6 @@ def write_ints(values: Int[])
 
 ## Not supported features
 
-* Multidimensional array
 * Variable-length array
 * Associative array
 * Miscellaneous data types

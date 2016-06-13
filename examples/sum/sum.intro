@@ -12,7 +12,7 @@ end
 def sum(values: Int[]): Int
   var ret = 0
   for v in values
-    ret = ret + v
+    ret += v
   end
   return ret
 end
