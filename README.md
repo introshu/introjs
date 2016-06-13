@@ -7,9 +7,12 @@ IntroJS is a JavaScript implementation of the simplified programming language In
 ```
 def main()
   var n = read_int()
+  if n <= 0
+    return
+  end
   while 1
     var values = read_ints(n)
-    if $values == 0
+    if !$values
       break
     end
     write_int(sum(values))
