@@ -11,6 +11,7 @@ describe('execute', function () {
     './test/assignments/assignments.intro',
     './test/expressions/expressions.intro',
     './test/literals/literals.intro',
+    './test/loops/loops.intro',
   ];
   sourceFilePaths.forEach(function (sourceFilePath) {
     it (sourceFilePath, function () {

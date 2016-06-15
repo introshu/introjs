@@ -1,0 +1,74 @@
+def main()
+  var vvv = [[1, 0, 3], [4, 5, 6]]
+  test_for_break_default(vvv)
+  write_ints([])
+  test_for_break_label(vvv)
+  write_ints([])
+  test_while_break_default(vvv)
+  write_ints([])
+  test_while_break_label(vvv)
+end
+
+def test_for_break_default(vvv: Int[][])
+  LOOP1:
+  for vv in vvv
+    LOOP2:
+    for v in vv
+      if !v
+        break
+      end
+      write_int(v)
+    end
+    write_ints(vv)
+  end
+end
+
+def test_for_break_label(vvv: Int[][])
+  LOOP1:
+  for vv in vvv
+    LOOP2:
+    for v in vv
+      if !v
+        break LOOP1
+      end
+      write_int(v)
+    end
+    write_ints(vv)
+  end
+end
+
+def test_while_break_default(vvv: Int[][])
+  var i = 0
+  LOOP1:
+  while i < $vvv
+    var j = 0
+    LOOP2:
+    while j < $vvv[i]
+      if !vvv[i][j]
+        break
+      end
+      write_int(vvv[i][j])
+      j += 1
+    end
+    write_ints(vvv[i])
+    i += 1
+  end
+end
+
+def test_while_break_label(vvv: Int[][])
+  var i = 0
+  LOOP1:
+  while i < $vvv
+    var j = 0
+    LOOP2:
+    while j < $vvv[i]
+      if !vvv[i][j]
+        break LOOP1
+      end
+      write_int(vvv[i][j])
+      j += 1
+    end
+    write_ints(vvv[i])
+    i += 1
+  end
+end
