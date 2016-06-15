@@ -153,6 +153,8 @@ def write_ints(values: Int[])
 * Class
 * Closure
 * Coroutine
+* Generics
+* Annotation
 * Multithread
 * Asynchronous
 * Source map
