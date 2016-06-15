@@ -7,68 +7,148 @@ def main()
   test_while_break_default(vvv)
   write_ints([])
   test_while_break_label(vvv)
+  write_ints([])
+  test_for_continue_default(vvv)
+  write_ints([])
+  test_for_continue_label(vvv)
+  write_ints([])
+  test_while_continue_default(vvv)
+  write_ints([])
+  test_while_continue_label(vvv)
 end
 
 def test_for_break_default(vvv: Int[][])
   LOOP1:
-  for vv in vvv
-    LOOP2:
-    for v in vv
-      if !v
-        break
-      end
-      write_int(v)
+    for vv in vvv
+      LOOP2:
+        for v in vv
+          if !v
+            break
+          end
+          write_int(v)
+        end
+      write_ints(vv)
     end
-    write_ints(vv)
-  end
 end
 
 def test_for_break_label(vvv: Int[][])
   LOOP1:
-  for vv in vvv
-    LOOP2:
-    for v in vv
-      if !v
-        break LOOP1
-      end
-      write_int(v)
+    for vv in vvv
+      LOOP2:
+        for v in vv
+          if !v
+            break LOOP1
+          end
+          write_int(v)
+        end
+      write_ints(vv)
     end
-    write_ints(vv)
-  end
 end
 
 def test_while_break_default(vvv: Int[][])
   var i = 0
   LOOP1:
-  while i < $vvv
-    var j = 0
-    LOOP2:
-    while j < $vvv[i]
-      if !vvv[i][j]
-        break
-      end
-      write_int(vvv[i][j])
-      j += 1
+    while i < $vvv
+      var vv = vvv[i]
+      i += 1
+      var j = 0
+      LOOP2:
+        while j < $vv
+          var v = vv[j]
+          j += 1
+          if !v
+            break
+          end
+          write_int(v)
+        end
+      write_ints(vv)
     end
-    write_ints(vvv[i])
-    i += 1
-  end
 end
 
 def test_while_break_label(vvv: Int[][])
   var i = 0
   LOOP1:
-  while i < $vvv
-    var j = 0
-    LOOP2:
-    while j < $vvv[i]
-      if !vvv[i][j]
-        break LOOP1
-      end
-      write_int(vvv[i][j])
-      j += 1
+    while i < $vvv
+      var vv = vvv[i]
+      i += 1
+      var j = 0
+      LOOP2:
+        while j < $vv
+          var v = vv[j]
+          j += 1
+          if !v
+            break LOOP1
+          end
+          write_int(v)
+        end
+      write_ints(vv)
     end
-    write_ints(vvv[i])
-    i += 1
-  end
+end
+
+def test_for_continue_default(vvv: Int[][])
+  LOOP1:
+    for vv in vvv
+      LOOP2:
+        for v in vv
+          if !v
+            continue
+          end
+          write_int(v)
+        end
+      write_ints(vv)
+    end
+end
+
+def test_for_continue_label(vvv: Int[][])
+  LOOP1:
+    for vv in vvv
+      LOOP2:
+        for v in vv
+          if !v
+            continue LOOP1
+          end
+          write_int(v)
+        end
+      write_ints(vv)
+    end
+end
+
+def test_while_continue_default(vvv: Int[][])
+  var i = 0
+  LOOP1:
+    while i < $vvv
+      var vv = vvv[i]
+      i += 1
+      var j = 0
+      LOOP2:
+        while j < $vv
+          var v = vv[j]
+          j += 1
+          if !v
+            continue
+          end
+          write_int(v)
+        end
+      write_ints(vv)
+    end
+end
+
+def test_while_continue_label(vvv: Int[][])
+  var i = 0
+  LOOP1:
+    while i < $vvv
+      var vv = vvv[i]
+      i += 1
+      var j = 0
+      LOOP2:
+        while j < $vv
+          var v = vv[j]
+          j += 1
+          if !v
+            continue LOOP1
+          end
+          write_int(v)
+        end
+      write_ints(vv)
+    end
 end
