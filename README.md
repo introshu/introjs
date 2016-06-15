@@ -147,7 +147,6 @@ def write_ints(values: Int[])
 * Multiline comment
 * Switch statement
 * Do-while statement
-* Labeled break
 * Exception handling
 * Module
 * Class
