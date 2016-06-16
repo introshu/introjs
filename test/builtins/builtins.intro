@@ -1,5 +1,5 @@
 def main()
-  var values = now()
-  trace clock(), values
-  write_int($values)
+  var date = get_date()
+  trace get_time(), date
+  write_int($date)
 end

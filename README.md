@@ -116,11 +116,11 @@ Options:
 ## Built-in functions
 
 ```
-def clock(): Int
+def get_date(): Int[]
 ```
 
 ```
-def now(): Int[]
+def get_time(): Int
 ```
 
 ```
