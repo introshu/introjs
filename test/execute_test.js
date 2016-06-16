@@ -9,6 +9,7 @@ describe('execute', function () {
     './examples/sum/sum.intro',
     './test/arrays/arrays.intro',
     './test/assignments/assignments.intro',
+    './test/builtins/builtins.intro',
     './test/expressions/expressions.intro',
     './test/literals/literals.intro',
     './test/loops/loops.intro',

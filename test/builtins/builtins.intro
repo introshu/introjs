@@ -1,0 +1,5 @@
+def main()
+  var values = now()
+  trace values
+  write_int($values)
+end
