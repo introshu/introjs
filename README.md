@@ -116,6 +116,14 @@ Options:
 ## Built-in functions
 
 ```
+def clock(): Int
+```
+
+```
+def now(): Int[]
+```
+
+```
 def read(values: Int[], offset: Int, length: Int): Int
 ```
 
