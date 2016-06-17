@@ -1,0 +1,8 @@
+def main()
+  write_ints(array_func()[1])
+  write_int(array_func()[1][2])
+end
+
+def array_func(): Int[][]
+  return [[1, 2, 3], [4, 5, 6]]
+end
