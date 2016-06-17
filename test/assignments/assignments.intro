@@ -31,6 +31,9 @@ def compound_assignments(a: Int, b: Int): Int[]
   var rsh = a
   rsh >>= b
 
+  var zrsh = a
+  zrsh >>>= b
+
   var band = a
   band &= b
 
@@ -40,11 +43,11 @@ def compound_assignments(a: Int, b: Int): Int[]
   var bxor = a
   bxor ^= b
 
-  return [add, sub, mul, fdiv, zdiv, mod, rem, lsh, rsh, band, bor, bxor]
+  return [add, sub, mul, fdiv, zdiv, mod, rem, lsh, rsh, zrsh, band, bor, bxor]
 end
 
 def indexed_assignments(a: Int, b: Int): Int[]
-  var values = new Int[12]
+  var values = new Int[13]
   for i in $values
     values[i] = a
   end
@@ -56,9 +59,10 @@ def indexed_assignments(a: Int, b: Int): Int[]
   values[5] %%= b
   values[6] %= b
   values[7] <<= b
-  values[8] >>= b
-  values[9] &= b
-  values[10] |= b
-  values[11] ^= b
+  values[8] >>>= b
+  values[9] >>= b
+  values[10] &= b
+  values[11] |= b
+  values[12] ^= b
   return values
 end

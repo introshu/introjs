@@ -66,14 +66,19 @@ def main()
   write_int(5 << 2)
 
   write_empty(2)
+  write_int(-5 >> 0)
+  write_int(-5 >> 1)
+  write_int(-5 >> 2)
+
+  write_empty(2)
+  write_int(-5 >>> 0)
+  write_int(-5 >>> 1)
+  write_int(-5 >>> 2)
+
+  write_empty(2)
   write_int(5 & 3)
   write_int(5 | 3)
   write_int(5 ^ 3)
-
-  write_empty(2)
-  write_int(5 >> 0)
-  write_int(5 >> 1)
-  write_int(5 >> 2)
 
   write_empty(2)
   write_int(3 == 3)
